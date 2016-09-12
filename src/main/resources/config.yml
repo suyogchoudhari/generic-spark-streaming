@@ -1,0 +1,8 @@
+---
+topic : abc
+reports:
+  - report : uniquehits
+    query  : SELECT country, url, jwt, COUNT(*) uniquehits FROM dataset GROUP BY country, url, jwt
+  - report : avgpageload
+    query  : SELECT country, url, jwt, AVG(pageloadtime) avgpageload FROM dataset GROUP BY country, url, jwt
+...
